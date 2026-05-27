@@ -92,17 +92,15 @@ reg3 = a3 + k3 * log_n
 reg4 = a4 + k4 * log_n
 reg5 = a5 + k5 * log_n
 
-plt.figure()
+plt.plot(log_n, log_times2, 'o', color='orange',  label='methode 2')
+plt.plot(log_n, log_times3, 'o', color='green',  label='methode 3')
+plt.plot(log_n, log_times4, 'o', color='red',  label='methode 4')
+plt.plot(log_n, log_times5, 'o', color='blue',  label='methode 5')
 
-plt.plot(log_n, log_times2, 'o', label='methode2')
-plt.plot(log_n, log_times3, 'o', label='methode3')
-plt.plot(log_n, log_times4, 'o', label='methode4')
-plt.plot(log_n, log_times5, 'o', label='methode5')
-
-plt.plot(log_n, reg2, label='reg2')
-plt.plot(log_n, reg3, label='reg3')
-plt.plot(log_n, reg4, label='reg4')
-plt.plot(log_n, reg5, label='reg5')
+plt.plot(log_n, reg2, color='orange', label='regression 2')
+plt.plot(log_n, reg3, color='green', label='regression 3')
+plt.plot(log_n, reg4, color='red', label='regression 4')
+plt.plot(log_n, reg5, color='blue', label='regression 5')
 
 plt.xlabel("ln(n)")
 plt.ylabel("ln(T(n))")
@@ -110,3 +108,5 @@ plt.title("Régression log-log")
 plt.legend()
 
 plt.show()
+
+print("On peut voir avec le deuxième grapgiques que la raison pourquoi la méthode 3 est beaucoup plus efficace, c'est parce qu'elle est beaucoup plus lourde en terme de calcul. ")
