@@ -59,9 +59,6 @@ def gauss_seidel(A, b, x0, x_exact):
     return x, it + 1, errors
 
 
-# ==========================
-# Méthode SOR
-# ==========================
 def sor(A, b, x0, x_exact):
     n = len(b)
     x = x0.copy()
@@ -94,9 +91,6 @@ x_gs, it_gs, err_gs = gauss_seidel(A, b, x0, x_exacte)
 x_sor, it_sor, err_sor = sor(A, b, x0, x_exacte)
 
 
-# ==========================
-# Résultats
-# ==========================
 print("Jacobi :")
 print("Solution :", x_jacobi)
 print("Itérations :", it_jacobi)
